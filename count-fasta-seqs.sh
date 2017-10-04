@@ -112,8 +112,13 @@ sequence=`grep -v '>' $1`
 total=`echo $sequence | wc -m`
 
 #print output name and percent to file
+<<<<<<< HEAD
 echo "$name" >$1.
 echo "$total" >>$1.
 >>>>>>> 1f8aa01c7299bd72015b1a26f2683805684ba973
+=======
+echo "$name" >${1}_sequencecount.txt
+echo "$total" >>${1}_sequencecount.txt
+>>>>>>> fc1d1be61573ef3204c4a730c8565e27192508f5
 
 
