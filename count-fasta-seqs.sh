@@ -64,7 +64,6 @@
 # for this. Let's take a look at what it gives us:
 
 echo "$@"
-
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
 #
