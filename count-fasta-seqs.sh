@@ -94,4 +94,10 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-dddkkk
+#COMMENT HERE
+
+for filepath in "$@"
+do
+	#ourshitshere
+done
+>>>>>>> ee5b26cff32a4a4489ab16d90161c70ee3d30aa4
