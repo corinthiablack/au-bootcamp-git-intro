@@ -94,9 +94,9 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-#COMMENT HERE
 
 for filepath in "$@"
 do
-	#ourshitshere
+	echo basename
+	echo grep ">" | wc -l | cut -f1 -d' '
 done
