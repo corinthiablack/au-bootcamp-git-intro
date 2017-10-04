@@ -95,3 +95,8 @@ echo "$@"
 # ADD YOUR CODE BELOW:
 
 #COMMENT HERE
+
+for filepath in "$@"
+do
+	#ourshitshere
+done
