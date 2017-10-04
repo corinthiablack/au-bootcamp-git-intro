@@ -98,5 +98,9 @@ echo "$@"
 
 for filepath in "$@"
 do
-	#ourshitshere
+	#echo the total number of sequences and the file name
+	
+
 done
+
+
