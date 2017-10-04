@@ -96,11 +96,25 @@ echo "$@"
 
 #COMMENT HERE
 
-for filepath in "$@"
+file="$1"
+
 do
+<<<<<<< HEAD
 	#echo the total number of sequences and the file name
 	
 
 done
+=======
+#seperate the sequence from the sequence name
+name=`grep '>' $1`
+sequence=`grep -v '>' $1`
+
+#total sequence
+total=`echo $sequence | wc -m`
+
+#print output name and percent to file
+echo "$name" >$1.
+echo "$total" >>$1.
+>>>>>>> 1f8aa01c7299bd72015b1a26f2683805684ba973
 
 
