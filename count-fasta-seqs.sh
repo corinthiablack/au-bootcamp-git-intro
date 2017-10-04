@@ -93,3 +93,20 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+#COMMENT HERE
+
+file="$1"
+
+do
+#seperate the sequence from the sequence name
+name=`grep '>' $1`
+sequence=`grep -v '>' $1`
+
+#total sequence
+total=`echo $sequence | wc -m`
+
+#print output name and percent to file
+echo "$name" >$1.
+echo "$total" >>$1.
+
+
