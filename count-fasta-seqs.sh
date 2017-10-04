@@ -107,7 +107,7 @@ sequence=`grep -v '>' $1`
 total=`echo $sequence | wc -m`
 
 #print output name and percent to file
-echo "$name" >$1
+echo "$name" >$1.
 echo "$total" >>$1.
 
 
