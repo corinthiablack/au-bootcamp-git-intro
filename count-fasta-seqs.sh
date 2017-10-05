@@ -99,6 +99,7 @@
 #
 # ADD YOUR CODE BELOW:
 
+<<<<<<< HEAD
 # <<<<<<< HEAD
 #COMMENT HERE
 
@@ -107,11 +108,25 @@
 #	#ourshitshere
 #done
 # >>>>>>> ee5b26cff32a4a4489ab16d90161c70ee3d30aa4
+=======
+#COMMENT HERE
+
+#file="$1" is the input added to the sh command
+
+	file="$1"
+>>>>>>> 0a7a7c5a137a639743a0034b87460be432c6349d
 
 #search for files included in the command line and print the total sequences and filename to the output
 
 for file in "$@"
+
+	a="$1"
+	b="$2"
+
+for file in $a $b
+
 do
+<<<<<<< HEAD
 	
         NUM=`grep '>' $file | wc -l`
        	filename=`basename $file`
@@ -133,3 +148,26 @@ echo $TOTAL
 
 #NEED TO FIGURE OUT HOW TO ADD TOTAL SEQUENCES TO PRINT AFTER THE LOOP
 # >>>>>>> 133106178c280e3020355bfd73f58cc1c1fb5d71
+=======
+
+	sequences=`grep '>' ${file} | wc -l`
+	filename=`basename ${file}`
+	
+	echo $sequences $filename
+	
+#seperate the sequence from the sequence name
+
+	name=`grep '>' ${file}`
+	sequence=`grep -v '>' ${file}`
+
+#total sequence
+
+	total=`echo $sequence | wc -m`
+
+#print output name and sequence length to a file
+
+	echo "$name" >${file}_sequencecount.txt
+	echo "$total" >>${file}_sequencecount.txt
+
+done
+>>>>>>> 0a7a7c5a137a639743a0034b87460be432c6349d
