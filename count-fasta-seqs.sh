@@ -93,32 +93,15 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-#COMMENT HERE
-
-file="$1"
-
+#search for files included in the command line and print the total sequences and filename to the output
+for file in "$@"
 do
-<<<<<<< HEAD
-	#echo the total number of sequences and the file name
 	
-
+	sequences=`grep '>' $file | wc -l`
+	filename=`basename $file`
+	
+	echo $sequences $filename
+	
 done
-=======
-#seperate the sequence from the sequence name
-name=`grep '>' $1`
-sequence=`grep -v '>' $1`
 
-#total sequence
-total=`echo $sequence | wc -m`
-
-#print output name and percent to file
-<<<<<<< HEAD
-echo "$name" >$1.
-echo "$total" >>$1.
->>>>>>> 1f8aa01c7299bd72015b1a26f2683805684ba973
-=======
-echo "$name" >${1}_sequencecount.txt
-echo "$total" >>${1}_sequencecount.txt
->>>>>>> fc1d1be61573ef3204c4a730c8565e27192508f5
-
-
+#NEED TO FIGURE OUT HOW TO ADD TOTAL SEQUENCES TO PRINT AFTER THE LOOP
