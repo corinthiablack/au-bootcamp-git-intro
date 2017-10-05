@@ -63,7 +63,7 @@
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
 
-echo "$@"
+# echo "$@"
 
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
@@ -94,10 +94,25 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+#first commit#
 #COMMENT HERE
 
+#for filepath in "$@"
+#do
+#	#ourshitshere
+#done
+#>>>>>>> ee5b26cff32a4a4489ab16d90161c70ee3d30aa4
+
+
+#second commit
+
 for filepath in "$@"
+
 do
-	#ourshitshere
+
+NUM=`grep ">" $filepath | wc -l`
+
+echo $NUM  
+echo expr $NUM 
 done
->>>>>>> ee5b26cff32a4a4489ab16d90161c70ee3d30aa4
+
