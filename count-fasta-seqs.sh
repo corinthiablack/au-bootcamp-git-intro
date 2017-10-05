@@ -95,19 +95,37 @@ echo "$@"
 
 #COMMENT HERE
 
-echo
+#file="$1" is the input added to the sh command
 
-file="$1"
+	file="$1"
 
+#search for files included in the command line and print the total sequences and filename to the output
+for file in "$@"
+
+	a="$1"
+	b="$2"
+
+for file in $a $b
+
+do
+
+	sequences=`grep '>' ${file} | wc -l`
+	filename=`basename ${file}`
+	
+	echo $sequences $filename
+	
 #seperate the sequence from the sequence name
-name=`grep '>' $1`
-sequence=`grep -v '>' $1`
+
+	name=`grep '>' ${file}`
+	sequence=`grep -v '>' ${file}`
 
 #total sequence
-total=`echo $sequence | wc -m`
 
-#print output name and percent to file
-echo "$name" >${1}_sequencecount.txt
-echo "$total" >>${1}_sequencecount.txt
+	total=`echo $sequence | wc -m`
 
+#print output name and sequence length to a file
 
+	echo "$name" >${file}_sequencecount.txt
+	echo "$total" >>${file}_sequencecount.txt
+
+done
