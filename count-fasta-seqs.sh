@@ -1,3 +1,4 @@
+
 #!/bin/sh
 
 # How this script should behave:
@@ -63,8 +64,12 @@
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
 
+#<<<<<<< HEAD
 # echo "$@"
 
+# =======
+# echo "$@"
+#>>>>>>> 133106178c280e3020355bfd73f58cc1c1fb5d71
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
 #
@@ -94,25 +99,37 @@
 #
 # ADD YOUR CODE BELOW:
 
-#first commit#
+# <<<<<<< HEAD
 #COMMENT HERE
 
 #for filepath in "$@"
 #do
 #	#ourshitshere
 #done
-#>>>>>>> ee5b26cff32a4a4489ab16d90161c70ee3d30aa4
+# >>>>>>> ee5b26cff32a4a4489ab16d90161c70ee3d30aa4
 
+#search for files included in the command line and print the total sequences and filename to the output
 
-#second commit
-
-for filepath in "$@"
-
+for file in "$@"
 do
+	
+        NUM=`grep '>' $file | wc -l`
+       	filename=`basename $file`
 
-NUM=`grep ">" $filepath | wc -l`
-
-echo $NUM  
-echo expr $NUM 
+	echo $NUM $filename
+        
 done
 
+
+
+
+
+
+
+TOTAL=`grep -o ">" "$@" | wc -m`
+
+
+echo $TOTAL
+
+#NEED TO FIGURE OUT HOW TO ADD TOTAL SEQUENCES TO PRINT AFTER THE LOOP
+# >>>>>>> 133106178c280e3020355bfd73f58cc1c1fb5d71
