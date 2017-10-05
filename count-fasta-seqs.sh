@@ -95,9 +95,10 @@ echo "$@"
 
 #COMMENT HERE
 
+echo
+
 file="$1"
 
-do
 #seperate the sequence from the sequence name
 name=`grep '>' $1`
 sequence=`grep -v '>' $1`
