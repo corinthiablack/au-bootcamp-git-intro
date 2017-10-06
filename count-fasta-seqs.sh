@@ -2,8 +2,7 @@
 
 <<<<<<< HEAD
 #COMMENT HERE
-#Script for Lab Assignmennt Four
-#Can anybody see Dasia's comments
+#Script for Lab Assignmennt Four 
 file="$1"
 =======
 =======
