@@ -34,3 +34,7 @@ done
 #The final line should have the total number of sequences across all files
 TOTAL=`grep '>' $@ | wc -l`
 echo $TOTAL
+
+
+#working code should echo the name of the file without the full pathname and count the number of sequences within that file
+#probably not the right working code for this assignment, dont know why I got this version when I did my latest `git pull`
