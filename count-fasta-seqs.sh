@@ -3,6 +3,8 @@
 <<<<<<< HEAD
 #COMMENT HERE
 #Script for Lab Assignmennt Four 
+
+#File represents the first argument 
 file="$1"
 =======
 =======
