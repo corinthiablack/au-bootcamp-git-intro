@@ -93,6 +93,7 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+<<<<<<< HEAD
 
 file="$1"
 
@@ -109,3 +110,17 @@ echo "$total" >>${1}_sequencecount.txt
 
 
 >>>>>>> 1f8aa01c7299bd72015b1a26f2683805684ba973
+=======
+#search for files included in the command line and print the total sequences and filename to the output
+for file in "$@"
+do
+	
+	sequences=`grep '>' $file | wc -l`
+	filename=`basename $file`
+	
+	echo $sequences $filename
+	
+done
+
+#NEED TO FIGURE OUT HOW TO ADD TOTAL SEQUENCES TO PRINT AFTER THE LOOP
+>>>>>>> 133106178c280e3020355bfd73f58cc1c1fb5d71
